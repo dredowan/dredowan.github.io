@@ -1,8 +1,8 @@
 {
   "name": "DreDoWanApp",
   "short_name": "DreDoWan",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#2994ea",
+  "background_color": "#2d98ed",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",

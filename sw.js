@@ -4,7 +4,7 @@ var CACHE_DYNAMIC_NAME = 'dynamic-v1';
 
 self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
-  // self.skipWaiting();
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_STATIC_NAME)
       .then(function(cache) {

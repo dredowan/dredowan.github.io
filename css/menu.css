@@ -1,0 +1,28 @@
+body{
+    background-image: url("../images/menu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.menu{
+    padding-top: 55vh;
+}
+.leaderboard{
+    padding-top: 3vh;
+}
+.btn{
+    margin-top: 1vh;
+    width: 70vw;
+    margin-bottom: 1vh;
+}
+#nama{
+    color: rgb(133, 255, 149);
+}
+.table{
+    background-color: aliceblue;
+}
+.white{
+    color: antiquewhite;
+}
+

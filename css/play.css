@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.fireball{
+    background: url("../images/fireball.gif");
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    bottom: 3vh;
+    right: -40vw;
+    /* right: -10vw; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count : infinite;
+}
+@keyframes example {
+    0%   {right:-40vw;}
+    100% {right:110vw;}
+}
+
+
+#animatedBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/playground.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+/*adjust s value for speed*/
+  animation: animatedBackground 250s linear infinite;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}

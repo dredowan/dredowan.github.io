@@ -24,7 +24,9 @@
         // var arrName = [];
         // var arrScore = [];
         $(document).ready(function(){
-
+          $("#play").click(function(){
+              window.location.href="play.html";
+          });
           $(".leaderboard").hide();
           $("#showlead").click( async function(){
             console.log("SHOWING LEAD");
@@ -76,7 +78,7 @@
     <div class="menu">
       <center>
         <h3><span id="nama">HALO</span></h3>
-        <button class="btn btn-success">Play</button><br>
+        <button class="btn btn-success" id="play">Play</button><br>
         <button class="btn btn-success">Character</button><br>
         <button class="btn btn-primary" id="showlead">Leaderboard</button><br>
         <button class="btn btn-danger" onclick="signOut();">Logout</button><br>

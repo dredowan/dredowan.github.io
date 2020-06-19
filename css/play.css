@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 #char {
-  background: url("../images/char1.gif");
+  background: url("../images/chars.gif");
   position: absolute;
   width: 15vw;
   height: 15vh;

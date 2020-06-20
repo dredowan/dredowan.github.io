@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/menu.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <meta name="google-signin-client_id" content="813637273069-slrrq4vbf6ac97uvqlpdp5hukvh68lvb.apps.googleusercontent.com">
+    <script>
+        // var arrName = [];
+        // var arrScore = [];
+        $(document).ready(function(){
+          readLearboard();
+          $(".leaderboard").hide();
+          $("#showlead").click( async function(){
+            console.log("SHOWING LEAD");
+            
+            $(".menu").fadeOut("200",function(){
+              $(".leaderboard").fadeIn("200");
+            });
+          });
+          $("#closelead").click(function(){
+            $(".leaderboard").fadeOut("200",function(){
+              $(".menu").fadeIn("200");
+            });
+          });
+        });
+        function readLearboard(){
+          var baris = "";
+          var db = firebase.firestore();
+          db.collection("leaderboard").orderBy("highscore","desc").limit(100).get().then((querySnapshot) => {
+            let docs = querySnapshot.docs;  
+            var rank = 1;
+            var myrank;
+            for (let doc of docs) {
+              // console.log(doc.id);
+              if( String(doc.id) == String(localStorage.userid)){
+                myrank = rank;
+                localStorage.currentHighscore = doc.data().highscore;
+              }
+              baris += "<tr><td>"+String(rank)+"</td>";
+              baris += "<td>"+doc.data().name+"</td>";
+              baris +="<td>"+String(doc.data().highscore)+"</td></tr>";
+              rank++;
+            }
+            document.getElementById("tabledata").innerHTML = baris;
+            document.getElementById("myrank").innerHTML = myrank;
+            if(!localStorage.currentHighscore){
+              localStorage.currentHighscore = 0;
+              document.getElementById("myrank").innerHTML = "Not ranked";
+            }
+          });
+        }
+    </script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="menu">
+      <center>
+        <h3><span id="nama">HALO</span></h3>
+        <a class="btn btn-success" href="play.html">Play</a><br>
+        <button class="btn btn-success">Character</button><br>
+        <button class="btn btn-primary" id="showlead">Leaderboard</button><br>
+        <button class="btn btn-danger" onclick="signOut();">Logout</button><br>
+      </center>
+    </div>
+    <div class="container">
+      <div class="leaderboard">
+        <center>
+          <h2 class="white">Leaderboard</h2>
+          <h5 class="white">Your rank : <span id="myrank"></span></h5>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody id="tabledata">
+            </tbody>
+          </table>
+          <button class="btn btn-primary" id="closelead">BACK</button><br>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

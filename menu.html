@@ -28,6 +28,7 @@
           $(".leaderboard").hide();
           $("#showlead").click( async function(){
             console.log("SHOWING LEAD");
+            readLearboard();
             
             $(".menu").fadeOut("200",function(){
               $(".leaderboard").fadeIn("200");

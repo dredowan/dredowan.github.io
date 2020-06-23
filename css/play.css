@@ -37,7 +37,7 @@ body {
 }
 .fireball{
     background: url("../images/fireball.gif");
-    width: 10vw;
+    width: 15vw;
     height: 15vh;
     position: absolute;
     bottom: 3vh;

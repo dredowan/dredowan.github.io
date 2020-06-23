@@ -13,7 +13,13 @@ self.addEventListener('install', function(event) {
           '/',
           '/manifest.json',
           '/index.html',
+          '/menu.html',
+          '/plays.html',
+          '/js/menu.js',
           '/js/index.js',
+          '/js/play.js',
+          '/css/menu.css',
+          '/css/play.css',
           '/css/index.css',
           '/offline/offline.html',
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
@@ -27,7 +33,10 @@ self.addEventListener('install', function(event) {
           '/images/icons/icon-152x152.png',
           '/images/icons/icon-192x192.png',
           '/images/icons/icon-384x384.png',
-          '/images/icons/icon-512x512.png'
+          '/images/icons/icon-512x512.png',      
+          '/images/fireball.gif',
+          '/images/chars.gif',
+          '/images/playground.png'
         ]);
       })
   )

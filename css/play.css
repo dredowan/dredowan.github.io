@@ -10,7 +10,7 @@ body {
   width: 15vw;
   height: 17vh;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto 100%;
   bottom: 5px;
   left: 40vw;
   max-width : 100px;
@@ -38,12 +38,12 @@ body {
 .fireball{
     background: url("../images/fireball.gif");
     width: 10vw;
-    height: 12vh;
+    height: 15vh;
     position: absolute;
     bottom: 3vh;
     right: -40vw;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
     animation-name: example;
     animation-duration: 10s;
     animation-iteration-count : infinite;

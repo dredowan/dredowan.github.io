@@ -39,7 +39,7 @@ body {
     width: 10vh;
     height: 15vh;
     position: absolute;
-    bottom: 1vh;
+    bottom: 0.5vh;
     right: -40vw;
     /* right: -10vw; */
     background-repeat: no-repeat;

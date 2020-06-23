@@ -15,6 +15,7 @@ body{
     margin-top: 1vh;
     width: 70vw;
     margin-bottom: 1vh;
+    max-width:600px;
 }
 #nama{
     color: rgb(133, 255, 149);

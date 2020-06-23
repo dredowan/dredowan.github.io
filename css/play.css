@@ -42,7 +42,6 @@ body {
     position: absolute;
     bottom: 3vh;
     right: -40vw;
-    /* right: -10vw; */
     background-repeat: no-repeat;
     background-size: 100%;
     animation-name: example;
@@ -54,11 +53,11 @@ body {
     100% {right:110vw;}
 }
 @keyframes jumping {
-  0%   {bottom:5px;}
+  0%   {bottom:3vh;}
   35%  {bottom:15vh;}
   50%  {bottom:15vh;}
   60%  {bottom:15vh;}
-  100% {bottom:5px;}
+  100% {bottom:3vh;}
 }
 
 .gameover{

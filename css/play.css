@@ -40,7 +40,7 @@ body {
     width: 10vh;
     height: 15vh;
     position: absolute;
-    bottom: 0.5vh;
+    bottom: 10px;
     right: -40vw;
     /* right: -10vw; */
     background-repeat: no-repeat;

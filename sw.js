@@ -20,7 +20,6 @@ self.addEventListener('install', function(event) {
           '/js/play.js',
           '/css/menu.css',
           '/css/play.css',
-          '/css/index.css',
           '/offline/offline.html',
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
           'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',

@@ -31,7 +31,7 @@ firebase.initializeApp(firebaseConfig);
       window.location.href="index.html";
     });
   }
-var ref = firebase.database().ref("/online/kTpCAcfzOqvGkV5kLRCb/status");
+var ref = firebase.firestore().ref("/online/kTpCAcfzOqvGkV5kLRCb/status");
 ref.onDisconnect().set(false);
 // ... sometime later
 ref.onDisconnect().cancel();

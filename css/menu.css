@@ -1,10 +1,10 @@
-body{
+/* body{
     background-image: url("../images/menu.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     
-}
+} */
 .menu{
     padding-top: 55vh;
 }

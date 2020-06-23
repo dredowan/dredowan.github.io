@@ -36,10 +36,10 @@ body {
 }
 .fireball{
     background: url("../images/fireball.gif");
-    width: 120px;
-    height: 60px;
+    width: 10vh;
+    height: 15vh;
     position: absolute;
-    bottom: 3vh;
+    bottom: 1vh;
     right: -40vw;
     /* right: -10vw; */
     background-repeat: no-repeat;

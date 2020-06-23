@@ -31,9 +31,7 @@ firebase.initializeApp(firebaseConfig);
       window.location.href="index.html";
     });
   }
-var ref = firebase.database();
-if(ref.onDisconnect()){
-    console.log("DISCONNET");
-}else{
-    console.log("CONNECTED");
-}
+var ref = firebase.database().ref("/online/kTpCAcfzOqvGkV5kLRCb/status");
+ref.onDisconnect().set(false);
+// ... sometime later
+ref.onDisconnect().cancel();

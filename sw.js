@@ -36,7 +36,11 @@ self.addEventListener('install', function(event) {
           '/images/icons/icon-512x512.png',      
           '/images/fireball.gif',
           '/images/chars.gif',
-          '/images/playground.png'
+          '/images/playground.png',
+          '/naruto.png',
+          '/icon.png',
+          '/images/background-photo.jpg',
+          '/images/background-photo-mobile-devices.jpg'
         ]);
       })
   )

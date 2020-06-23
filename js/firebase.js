@@ -31,4 +31,9 @@ firebase.initializeApp(firebaseConfig);
       window.location.href="index.html";
     });
   }
-
+var ref = firebase.database();
+if(ref.onDisconnect()){
+    console.log("DISCONNET");
+}else{
+    console.log("CONNECTED");
+}

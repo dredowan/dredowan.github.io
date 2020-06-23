@@ -39,8 +39,8 @@ self.addEventListener('install', function(event) {
           '/images/playground.png',
           '/naruto.png',
           '/icon.png',
-          '/images/background-photo.jpg',
-          '/images/background-photo-mobile-devices.jpg'
+          '/images/CobaBg2.png',
+          '/images/CobaBg3.png'
         ]);
       })
   )

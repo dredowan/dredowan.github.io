@@ -7,7 +7,7 @@ body {
 #char {
   background: url("../images/chars.gif");
   position: absolute;
-  width: 15vw;
+  width: 20vw;
   height: 17vh;
   background-repeat: no-repeat;
   background-size: auto 100%;

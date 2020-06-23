@@ -54,11 +54,11 @@ body {
     100% {right:110vw;}
 }
 @keyframes jumping {
-  0%   {bottom:3vh;}
+  0%   {bottom:5px;}
   35%  {bottom:15vh;}
   50%  {bottom:15vh;}
   60%  {bottom:15vh;}
-  100% {bottom:3vh;}
+  100% {bottom:5px;}
 }
 
 .gameover{

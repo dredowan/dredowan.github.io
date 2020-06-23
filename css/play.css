@@ -8,12 +8,13 @@ body {
   background: url("../images/chars.gif");
   position: absolute;
   width: 15vw;
-  height: 13vh;
+  height: 17vh;
   background-repeat: no-repeat;
   background-size: 100%;
   bottom: 3vh;
   left: 40vw;
   max-width : 100px;
+  max-height : 153px;
 }
 .jump{
   animation-name: jumping;

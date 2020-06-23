@@ -31,3 +31,26 @@ firebase.initializeApp(firebaseConfig);
       window.location.href="index.html";
     });
   }
+window.addEventListener('online',  updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+function updateOnlineStatus(event) {
+  var condition = navigator.onLine ? "online" : "offline";
+  console.log(condition);
+  if(condition == "online"){
+    console.log("UPDATE ke database");
+     var db = firebase.firestore();
+    db.collection("leaderboard").doc(localStorage.userid).set({
+        name: localStorage.playername,
+        highscore: parseInt(localStorage.currentHighscore)
+    })
+    .then(function() {
+        console.log("Document successfully written!");
+    })
+    .catch(function(error) {
+        console.error("Error writing document: ", error);
+    });  
+  }else{
+    console.log("TETAP OFFLINE");
+  }
+}

@@ -5,5 +5,6 @@ $(document).ready(function(){
         console.log(localStorage.playername);
     }else{
         console.log("USER NOT SIGNED");
+        window.location.href="index.html";
     }
 });

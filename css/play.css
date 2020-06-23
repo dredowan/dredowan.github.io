@@ -13,8 +13,7 @@ body {
   background-size: 100%;
   bottom: 3vh;
   left: 40vw;
-  max-width : 70px;
-  max-height : 150px;
+  max-width : 100px;
 }
 .jump{
   animation-name: jumping;

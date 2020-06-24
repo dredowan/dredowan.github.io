@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
 }
+*{
+  font-family : source sans pro;
+}
 /* #char {
   background: url("../images/chars.gif");
   position: absolute;

@@ -47,7 +47,7 @@ $(document).ready(function(){
             r1x+r1w < r2x ){
             // return false;
             // console.log("FALSE");
-            setTimeout(function(){ checkposition(element1,element2); },200);
+            setTimeout(function(){ checkposition(element1,element2); },500);
         }else{
             // return true;   
             $(element2).css("animation", "none");

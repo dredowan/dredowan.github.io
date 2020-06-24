@@ -5,6 +5,9 @@
     background-attachment: fixed;
     
 } */
+*{
+  font-family : source sans pro;
+}
 .menu{
     padding-top: 55vh;
 }

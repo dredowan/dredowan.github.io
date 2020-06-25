@@ -9,6 +9,11 @@ body {
 }
 #char{
       background: url("../images/chars.gif");
+      no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 }
 .btn{
 margin-top:10px;
@@ -54,6 +59,7 @@ max-width:500px;}
   }
   #char {
     /* background: url("../images/NARTOH.gif"); */
+    
     position: absolute;
     min-width: 70px;
     widht : auto;

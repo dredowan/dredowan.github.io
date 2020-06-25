@@ -22,15 +22,23 @@
     <meta name="google-signin-client_id" content="813637273069-slrrq4vbf6ac97uvqlpdp5hukvh68lvb.apps.googleusercontent.com">
     <link rel="apple-touch-icon" href="/naruto.png">
     <script>
-        // var arrName = [];
-        // var arrScore = [];
         $(document).ready(function(){
-          readLearboard();
+          // readLearboard();
+          
+          var names = ["","Boruto","Naruto","Sasuke"];
+          if(localStorage.currentchar){
+
+          } else{
+            localStorage.currentchar = 1;
+          }           
+          localStorage.maxchar = 3;
+          localStorage.minchar = 1;
+          updatechar(names);
           $(".leaderboard").hide();
+          $(".characterroom").hide();
           $("#showlead").click( async function(){
             console.log("SHOWING LEAD");
             readLearboard();
-            
             $(".menu").fadeOut("200",function(){
               $(".leaderboard").fadeIn("200");
             });
@@ -40,7 +48,40 @@
               $(".menu").fadeIn("200");
             });
           });
+          $("#showchar").click(function(){
+            $(".menu").fadeOut("200",function(){
+              $(".characterroom").fadeIn("200");
+            });
+          });
+          $("#closechar").click(function(){
+            $(".characterroom").fadeOut("200",function(){
+              $(".menu").fadeIn("200");
+            });
+          });
+          $(".next").click(function(){
+            if(localStorage.currentchar == localStorage.maxchar){
+              localStorage.currentchar = localStorage.minchar;
+            }else{
+              localStorage.currentchar = parseInt(localStorage.currentchar) + 1;
+            }
+            updatechar(names);
+          });
+          $(".prev").click(function(){
+            if(localStorage.currentchar == localStorage.minchar){
+              localStorage.currentchar = localStorage.maxchar;
+            }else{
+              localStorage.currentchar = parseInt(localStorage.currentchar) - 1;
+            }
+            updatechar(names);
+          });
         });
+        function updatechar(names){
+          console.log(localStorage.currentchar);
+          console.log(names[localStorage.currentchar]);
+          console.log(names[1]);
+          $("#charname").text(names[localStorage.currentchar]);
+          $(".mychar").css("background-image", "url(images/" + localStorage.currentchar + ".gif)");
+        }
         function readLearboard(){
           var baris = "";
           var db = firebase.firestore();
@@ -257,15 +298,20 @@ strong {
   <body>
     <div class="menu">
       <center>
-        <h3><span id="nama">HALO</span></h3>
+        <div class="cahrpreview">
+          <!-- <span id="charname">Character Name</span> -->
+          <div class="mychar" style="width: 60vw; height: 30vh; max-width: 500px; "></div>
+        </div>
+        <h2 style="margin-top: 2vh; margin-bottom: 2vh;"><span id="nama">HALO</span></h2>
         <a class="btn btn-success" href="plays.html">Play</a><br>
-        <button class="btn btn-primary">Character</button><br>
+        <button class="btn btn-primary" id="showchar">Character</button><br>
         <button class="btn btn-info" id="showlead">Leaderboard</button><br>
         <button class="btn btn-danger" onclick="signOut();">Logout</button><br>
       </center>
     </div>
+    <center>
       <div class="leaderboard">
-        <center>
+        
           <h2 class="white">Leaderboard</h2>
           <h5 class="white">Your rank : <span id="myrank"></span></h5>
           <table class="table table-striped">
@@ -280,7 +326,20 @@ strong {
             </tbody>
           </table>
           <button class="btn btn-primary" id="closelead">BACK</button><br>
-        </center>
       </div>
+    </center>
+    <center>
+      <div class="characterroom" style="padding-top: 10vh;">
+        <div class="cahrpreview">
+          <span id="charname">Character Name</span>
+          <div class="mychar" style="width: 60vw; height: 30vh; max-width: 500px; "></div>
+        </div>
+        <div class="navi" style="max-width: 500px; width: 90vw;">
+          <a href="#" class="prev"><img src="images/prev.png" style="width: 10%;"></a>
+          <a href="#" class="select btn btn-success" id="closechar">SELECT</a>
+          <a href="#" class="next"><img src="images/next.png" style="width: 10%;"></a>
+        </div>
+      </div>
+    </center>
   </body>
 </html>

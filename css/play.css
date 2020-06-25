@@ -7,61 +7,9 @@ body {
 *{
   font-family : source sans pro;
 }
-/* #char {
-  background: url("../images/chars.gif");
-  position: absolute;
-  width: 20vw;
-  height: 17vh;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  bottom: 5px;
-  left: 40vw;
-  max-width : 100px;
-  max-height : 153px;
-} */
-/* .jump{
-  animation-name: jumping;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-} */
-.snake{
-  background: url("../images/snake.gif");
-  width: 120px;
-  height: 90px;
-  position: absolute;
-  bottom: 3vh;
-  right: -40vw;
-  /* right: -10vw; */
-  background-repeat: no-repeat;
-  background-size: 100%;
-  animation-name: example;
-  animation-duration: 10s;
-  animation-iteration-count : infinite;  
+#char{
+      background: url("../images/chars.gif");
 }
-/* .fireball{
-    background: url("../images/fireball.gif");
-    width: 25vw;
-    height: 10vh;
-    position: absolute;
-    bottom: 3vh;
-    right: -40vw;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count : infinite;
-}
-@keyframes example {
-    0%   {right:-40vw;}
-    100% {right:110vw;}
-} */
-/* @keyframes jumping {
-  0%   {bottom:3vh;}
-  35%  {bottom:15vh;}
-  50%  {bottom:15vh;}
-  60%  {bottom:15vh;}
-  100% {bottom:3vh;}
-} */
 .btn{
 margin-top:10px;
 width :70%;
@@ -105,7 +53,7 @@ max-width:500px;}
     animation-iteration-count: infinite;
   }
   #char {
-    background: url("../images/chars.gif");
+    /* background: url("../images/NARTOH.gif"); */
     position: absolute;
     width: 73px;
     height: 120px;
@@ -153,7 +101,7 @@ max-width:500px;}
   animation-iteration-count: infinite;  
   }
   #char {
-    background: url("../images/chars.gif");
+    /* background: url("../images/chars.gif"); */
     position: absolute;
     width: 200px;
     height: 120px;
@@ -201,7 +149,7 @@ max-width:500px;}
   animation-iteration-count: infinite;
 }
   #char {
-    background: url("../images/chars.gif");
+    /* background: url("../images/chars.gif"); */
     position: absolute;
     width: 200px;
     height: 120px;

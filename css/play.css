@@ -55,7 +55,9 @@ max-width:500px;}
   #char {
     /* background: url("../images/NARTOH.gif"); */
     position: absolute;
-      width: 70px;
+    min-width: 70px;
+    widht : auto;
+    max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -97,7 +99,9 @@ max-width:500px;}
   #char {
     /* background: url("../images/NARTOH.gif"); */
     position: absolute;
-      width: 70px;
+    min-width: 70px;
+    widht : auto;
+    max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -139,7 +143,9 @@ max-width:500px;}
   #char {
     /* background: url("../images/chars.gif"); */
     position: absolute;
-    width:70px;
+    min-width: 70px;
+    widht : auto;
+    max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -181,7 +187,9 @@ max-width:500px;}
   #char {
     /* background: url("../images/chars.gif"); */
     position: absolute;
-    width: 70px;
+    min-width: 70px;
+    widht : auto;
+    max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -223,7 +231,9 @@ max-width:500px;}
   #char {
     /* background: url("../images/chars.gif"); */
     position: absolute;
-    width: 70px;
+    min-width: 70px;
+    widht : auto;
+    max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
     background-size: auto 100%;

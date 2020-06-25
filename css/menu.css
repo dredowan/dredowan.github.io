@@ -8,11 +8,18 @@
 *{
   font-family : source sans pro;
 }
+.mychar{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
 .menu{
-    padding-top: 55vh;
+    padding-top: 15vh;
 }
 .leaderboard{
     padding-top: 3vh;
+    max-width: 600px;
+    width: 80vw;
 }
 .btn{
     margin-top: 1vh;

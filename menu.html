@@ -290,10 +290,37 @@ strong {
   html, body, .container {
     height: auto;
   }
+  
+  .prev {
+    width : 40px;
+    height : 30px;
+  }
+  
+  .select {
+    width : 80px;
+    height : 40px;
+  }
+  .next {
+    width : 40px;
+    height : 30px;
+  }
 }
 @media only screen and (max-width: 767px) {
   body {
     background-image: url(images/CobaBg3.png);
+  }
+  .prev {
+    width : 50px;
+    height : 40px;
+  }
+  
+  .select {
+    width : 90px;
+    height : 50px;
+  }
+  .next {
+    width : 50px;
+    height : 40px;
   }
   }
 </style>
@@ -338,9 +365,9 @@ strong {
         </div>
         <div class="navi" style="max-width: 500px; width: 100vw;">
           
-          <a href="#" class="prev" style="width: 20px; height: 10px"><img style="width: 40px; height: 30px" src="images/prev.png" ></a>
-          <a href="#" class="select btn btn-success" id="closechar" style="width: 80px; height: 40px">SELECT</a>
-          <a href="#" class="next" style="width: 20px; height: 10px"><img style="width: 40px; height: 30px" src="images/next.png"></a>
+          <a href="#" style="width: 20px; height: 10px"><img class="prev" src="images/prev.png" ></a>
+          <a href="#" class="select btn btn-success" id="closechar">SELECT</a>
+          <a href="#" style="width: 20px; height: 10px"><img class="next" src="images/next.png"></a>
         </div>
       </div>
     </center>

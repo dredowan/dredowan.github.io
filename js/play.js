@@ -1,8 +1,9 @@
 $(document).ready(function(){
-    if(!localStorage.playername){
-        console.log("USER NOT SIGNED");
-        window.location.href="index.html";
-    }
+         if(!localStorage.playername){
+             console.log("USER NOT SIGNED");
+             window.location.href="index.html";
+         }
+    $("#char").css("background-image", "url(../images/" + localStorage.currentchar + ".gif)");
     var score = 0;
     var run = true;
     // alert("GAME START");

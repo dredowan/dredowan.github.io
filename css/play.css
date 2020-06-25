@@ -9,11 +9,6 @@ body {
 }
 #char{
       background: url("../images/chars.gif");
-      no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
 }
 .btn{
 margin-top:10px;
@@ -37,7 +32,7 @@ max-width:500px;}
   background: url("../images/playground.png");
   background-repeat: repeat;
   background-position: 0 0;
-  background-size: auto 100%;
+  background-size: contain;
 /*adjust s value for speed*/
   animation: animatedBackground 250s linear infinite;
 }
@@ -110,7 +105,7 @@ max-width:500px;}
     max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: contain;
     bottom: 2vh;
     left: 42vw;
   }
@@ -154,7 +149,7 @@ max-width:500px;}
     max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: contain;
     bottom: 2vh;
     left: 46vw;
   }
@@ -198,7 +193,7 @@ max-width:500px;}
     max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: contain;
     bottom: 2vh;
     left: 48vw;
   }
@@ -242,7 +237,7 @@ max-width:500px;}
     max-width: 900px;
     height: 120px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: contain;
     bottom: 2vh;
     left: 48vw;
   }

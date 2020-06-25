@@ -32,7 +32,7 @@ max-width:500px;}
   background: url("../images/playground.png");
   background-repeat: repeat;
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
 /*adjust s value for speed*/
   animation: animatedBackground 250s linear infinite;
 }

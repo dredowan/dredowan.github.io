@@ -59,7 +59,7 @@ $(document).ready(function(){
             // alert(localStorage.currentHighscore);
             // alert(score);
             if(localStorage.currentHighscore < score){
-                alert("New Highscore");
+                //alert("New Highscore");
                 localStorage.currentHighscore = score;
                 var db = firebase.firestore();
                 db.collection("leaderboard").doc(localStorage.userid).set({

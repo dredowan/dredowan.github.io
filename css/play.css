@@ -221,19 +221,6 @@ max-width:500px;}
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-  .prev {
-    width : 50px;
-    height : 40px;
-  }
-  
-  .select {
-    width : 90px;
-    height : 50px;
-  }
-  .next {
-    width : 50px;
-    height : 40px;
-  }
   #char {
     /* background: url("../images/chars.gif"); */
     position: absolute;

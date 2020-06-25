@@ -18,6 +18,7 @@ self.addEventListener('install', function(event) {
           '/js/menu.js',
           '/js/index.js',
           '/js/play.js',
+          '/js/homescreen.js',
           '/css/menu.css',
           '/css/play.css',
           '/offline/offline.html',
